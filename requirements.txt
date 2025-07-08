@@ -1,0 +1,16 @@
+streamlit
+pandas
+selenium==4.33.0
+webdriver-manager==4.0.2
+beautifulsoup4==4.13.4
+torch
+transformers
+tensorflow==2.19.0
+numpy
+tqdm
+spacy
+scikit-learn
+matplotlib
+seaborn
+plotly
+wordcloud
