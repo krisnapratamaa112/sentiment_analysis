@@ -7,8 +7,8 @@ import os
 # Load IndoBERT tokenizer dan model (pytorch)
 @st.cache_resource(show_spinner=True)
 def load_bert_model():
-    tokenizer = AutoTokenizer.from_pretrained("indobenchmark/indobert-base-p1")
-    model = AutoModel.from_pretrained("indobenchmark/indobert-base-p1")
+    tokenizer = AutoTokenizer.from_pretrained("indobenchmark/indobert-base-p2")
+    model = AutoModel.from_pretrained("indobenchmark/indobert-base-p2")
     model.eval()
     return tokenizer, model
 
@@ -21,7 +21,7 @@ def load_trained_model():
     # Naik satu folder ke root repositori
     root_repo_path = os.path.dirname(current_dir)
     # Bangun path relatif ke model
-    model_path = os.path.join(root_repo_path, "models", "cnn_lstm_model.keras")
+    model_path = os.path.join(root_repo_path, "models", "cnn_bilstm_model.keras")
 
     # Load model menggunakan path absolut yang sudah dibangun
     model = load_model(model_path)

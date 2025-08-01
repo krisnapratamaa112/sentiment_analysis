@@ -9,13 +9,13 @@ from utils.model_utils import load_bert_model, load_trained_model
 
 # Main Streamlit app
 def main():
-    st.title("Aplikasi Analisis Sentimen ulasan produk di Tokopedia dengan CNN-LSTM dan IndoBERT")
+    st.title("Aplikasi Analisis Sentimen ulasan produk di Tokopedia")
     st.write("Anda dapat mengunggah file CSV berisi teks ulasan, atau masukkan teks secara manual untuk analisis sentimen.")
 
     st.info(
         """Belum punya kumpulan ulasan? Kami siap membantu Anda dengan proses pengambilan data secara otomatis (scraping)!
 
-    Silakan buka halaman 'pages/scraping.py' 
+    Silakan buka halaman 'pages/scraping.py (Saat ini terkena limit dari streamlit)' 
     pada aplikasi ini untuk memulai proses scraping."""
     )
 
@@ -23,7 +23,7 @@ def main():
     cnn_lstm_model = load_trained_model()
 
     # Upload file CSV
-    uploaded_file = st.file_uploader("Unggah file CSV", type=['csv'])
+    uploaded_file = st.file_uploader("Unggah file CSV (harus mempunyai kolom 'ulasan)" , type=['csv'])
     if uploaded_file is not None:
         try:
             df = pd.read_csv(uploaded_file)
