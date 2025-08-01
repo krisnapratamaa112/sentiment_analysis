@@ -13,9 +13,9 @@ def main():
     st.write("Anda dapat mengunggah file CSV berisi teks ulasan, atau masukkan teks secara manual untuk analisis sentimen.")
 
     st.info(
-        """Belum punya kumpulan ulasan? Kami siap membantu Anda dengan proses pengambilan data secara otomatis (scraping)!
+        """Belum punya kumpulan ulasan? Kami siap membantu Anda dengan proses pengambilan data secara otomatis (scraping)! (Saat ini terkena limit dari streamlit)
 
-    Silakan buka halaman 'pages/scraping.py (Saat ini terkena limit dari streamlit)' 
+    Silakan buka halaman 'pages/scraping.py' 
     pada aplikasi ini untuk memulai proses scraping."""
     )
 
